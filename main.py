@@ -7,7 +7,7 @@ def partition(array, low, high):
 
   for j in range(low, high):
     if array[j] <= pivot:
-      # Swap element smaller than pivot with element at position i
+      # Get the position where partitioned is done
       i = i + 1
       # Swapping element at i with element at j
       array[i], array[j] = array[j], array[i]
