@@ -2,12 +2,11 @@ def partition(array, low, high):
   # Choose the rightmost element as pivot
   pivot = array[high]
 
-  # Pointer for greater element
+  # Position where partioned is done
   i = low - 1
 
   for j in range(low, high):
     if array[j] <= pivot:
-      # Get the position where partitioned is done
       i = i + 1
       # Swapping element at i with element at j
       array[i], array[j] = array[j], array[i]
