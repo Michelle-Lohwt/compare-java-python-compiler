@@ -54,3 +54,4 @@ quick_sort(wordlist, 0, len(wordlist) - 1)
 x = x + 3
 # print(f'Sorted array: {wordlist}')
 # print(f'Time complexity: {x}')
+# print(f'Space complexity: {len(wordlist)}')
