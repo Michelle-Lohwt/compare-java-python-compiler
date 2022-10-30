@@ -4,9 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
-public class main {
+public class index {
     // Swapping two elements function
     public static void swap(String[] array, int c, int j) {
         String temp = array[c];
@@ -72,9 +71,11 @@ public class main {
 
         readFile.close();
 
+        long start = System.currentTimeMillis();
         String[] stringList = wordList.toArray(new String[wordList.size()]);
         quickSort(stringList, 0, stringList.length-1);
         System.out.println(Arrays.toString(stringList));
+        long end = System.currentTimeMillis();
+        System.out.println("Elapsed Time in milli seconds: "+ (end-start));
     }
-
 }
