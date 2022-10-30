@@ -17,7 +17,7 @@ public class main {
     // Initiate last elment as pivot, insert the pivot elment in the array in a sorted manner
     public static int partition(String[] arr, int left, int right) {
         // Setting pivot
-        String pivot = arr[left];
+        String pivot = arr[right];
 
         // Initiate the index of smaller element at rightmost position of pivot
         int i = (left - 1);
