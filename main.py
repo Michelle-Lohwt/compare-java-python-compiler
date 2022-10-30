@@ -1,3 +1,5 @@
+import timeit
+
 def partition(array, low, high):
   # Choose the rightmost element as pivot
   pivot = array[high]
@@ -29,7 +31,6 @@ def quick_sort(array, low, high):
     # Sort elements on the right of pivot
     quick_sort(array, pi + 1, high)
 
-
 # Load words
 wordlist = []
 with open('sgb-words.txt','r') as file:
@@ -38,5 +39,9 @@ with open('sgb-words.txt','r') as file:
     wordlist.append(word)
 
 # Sort words
+a = timeit.default_timer()
 quick_sort(wordlist, 0, len(wordlist) - 1)
+
 # print(f'Sorted array: {wordlist}')
+# print(f'Time complexity: {a}')
+# print(f'Space complexity: {len(wordlist)}')
