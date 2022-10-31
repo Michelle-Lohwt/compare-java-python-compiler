@@ -46,4 +46,3 @@ endString = ("%.20f" % endTime).rstrip('0').rstrip('.')
 
 print(f'Sorted array: {wordlist}')
 print(f'Time complexity: {endString}')
-# print(f'Space complexity: {len(wordlist)}')
