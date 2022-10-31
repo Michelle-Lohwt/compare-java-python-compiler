@@ -39,9 +39,11 @@ with open('sgb-words.txt','r') as file:
     wordlist.append(word)
 
 # Sort words
-a = timeit.default_timer()
-quick_sort(wordlist, 0, len(wordlist) - 1)
+startTime = timeit.default_timer()
+# quick_sort(wordlist, 0, len(wordlist) - 1)
+endTime = timeit.default_timer() - startTime
+endString = ("%.20f" % endTime).rstrip('0').rstrip('.')
 
 # print(f'Sorted array: {wordlist}')
-# print(f'Time complexity: {a}')
+print(f'Time complexity: {endString}')
 # print(f'Space complexity: {len(wordlist)}')
