@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -71,11 +73,12 @@ public class index {
 
         readFile.close();
 
-        long start = System.currentTimeMillis();
+        Instant start = Instant.now();
         String[] stringList = wordList.toArray(new String[wordList.size()]);
         quickSort(stringList, 0, stringList.length-1);
         System.out.println(Arrays.toString(stringList));
-        long end = System.currentTimeMillis();
-        System.out.println("Elapsed Time in milli seconds: "+ (end-start));
+        Instant end = Instant.now();
+        Duration timeElapsed = Duration.between(start, end);
+        System.out.println("Time taken: "+ timeElapsed.toMillis() +" milliseconds");
     }
 }
